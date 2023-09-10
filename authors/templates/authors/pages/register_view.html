@@ -1,0 +1,20 @@
+{% extends 'global/base.html' %}
+
+{% block title %}Register | {% endblock title %}
+
+{% block content %}
+
+    {% if messages %}
+    <ul class="message-success">
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <div class="main-content center container">
+        <h2>Register {{ request.session.number }}</h2>
+    </div>
+    {% include 'global/partials/form.html' %}
+    
+{% endblock content %}

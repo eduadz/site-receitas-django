@@ -1,0 +1,23 @@
+{% extends 'global/base.html' %}
+
+{% block title %}Register Recipe | {% endblock title %}
+
+{% block content %}
+
+    <div class="main-content center container">
+        <h2>Register recipe</h2>
+        
+        {% if messages %}
+        <ul class="message-success">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <div class="left">
+          {% include 'global/partials/form.html' %}
+        </div>
+    </div>
+
+{% endblock content %}
